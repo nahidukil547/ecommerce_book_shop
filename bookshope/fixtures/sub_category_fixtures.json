@@ -1,0 +1,1702 @@
+[
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 1,
+    "fields": {
+      "main_category": 1,
+      "sub_cat_name": "Literary Fiction",
+      "sub_cat_slug": "literary-fiction",
+      "sub_cat_image": "ecommerce/sub_category_images/literary-fiction.jpg",
+      "sub_cat_icon": "fa-solid fa-pen-nib",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 2,
+    "fields": {
+      "main_category": 1,
+      "sub_cat_name": "Historical Fiction",
+      "sub_cat_slug": "historical-fiction",
+      "sub_cat_image": "ecommerce/sub_category_images/historical-fiction.jpg",
+      "sub_cat_icon": "fa-solid fa-landmark",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 3,
+    "fields": {
+      "main_category": 1,
+      "sub_cat_name": "Romance",
+      "sub_cat_slug": "romance",
+      "sub_cat_image": "ecommerce/sub_category_images/romance.jpg",
+      "sub_cat_icon": "fa-solid fa-heart",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 4,
+    "fields": {
+      "main_category": 1,
+      "sub_cat_name": "Mystery & Thriller",
+      "sub_cat_slug": "mystery-thriller",
+      "sub_cat_image": "ecommerce/sub_category_images/mystery-thriller.jpg",
+      "sub_cat_icon": "fa-solid fa-magnifying-glass",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 5,
+    "fields": {
+      "main_category": 1,
+      "sub_cat_name": "Science Fiction",
+      "sub_cat_slug": "science-fiction",
+      "sub_cat_image": "ecommerce/sub_category_images/science-fiction.jpg",
+      "sub_cat_icon": "fa-solid fa-robot",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 6,
+    "fields": {
+      "main_category": 2,
+      "sub_cat_name": "Biography & Memoir",
+      "sub_cat_slug": "biography-memoir",
+      "sub_cat_image": "ecommerce/sub_category_images/biography-memoir.jpg",
+      "sub_cat_icon": "fa-solid fa-address-book",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 7,
+    "fields": {
+      "main_category": 2,
+      "sub_cat_name": "Self-Help",
+      "sub_cat_slug": "self-help",
+      "sub_cat_image": "ecommerce/sub_category_images/self-help.jpg",
+      "sub_cat_icon": "fa-solid fa-hand-holding-heart",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 8,
+    "fields": {
+      "main_category": 2,
+      "sub_cat_name": "Psychology",
+      "sub_cat_slug": "psychology",
+      "sub_cat_image": "ecommerce/sub_category_images/psychology.jpg",
+      "sub_cat_icon": "fa-solid fa-brain",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 9,
+    "fields": {
+      "main_category": 2,
+      "sub_cat_name": "Philosophy",
+      "sub_cat_slug": "philosophy",
+      "sub_cat_image": "ecommerce/sub_category_images/philosophy.jpg",
+      "sub_cat_icon": "fa-solid fa-scale-balanced",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 10,
+    "fields": {
+      "main_category": 2,
+      "sub_cat_name": "True Crime",
+      "sub_cat_slug": "true-crime",
+      "sub_cat_image": "ecommerce/sub_category_images/true-crime.jpg",
+      "sub_cat_icon": "fa-solid fa-handcuffs",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 11,
+    "fields": {
+      "main_category": 3,
+      "sub_cat_name": "Picture Books",
+      "sub_cat_slug": "picture-books",
+      "sub_cat_image": "ecommerce/sub_category_images/picture-books.jpg",
+      "sub_cat_icon": "fa-solid fa-image",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 12,
+    "fields": {
+      "main_category": 3,
+      "sub_cat_name": "Early Learning",
+      "sub_cat_slug": "early-learning",
+      "sub_cat_image": "ecommerce/sub_category_images/early-learning.jpg",
+      "sub_cat_icon": "fa-solid fa-puzzle-piece",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 13,
+    "fields": {
+      "main_category": 3,
+      "sub_cat_name": "Fairy Tales",
+      "sub_cat_slug": "fairy-tales",
+      "sub_cat_image": "ecommerce/sub_category_images/fairy-tales.jpg",
+      "sub_cat_icon": "fa-solid fa-wand-magic-sparkles",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 14,
+    "fields": {
+      "main_category": 3,
+      "sub_cat_name": "Chapter Books",
+      "sub_cat_slug": "chapter-books",
+      "sub_cat_image": "ecommerce/sub_category_images/chapter-books.jpg",
+      "sub_cat_icon": "fa-solid fa-book-bookmark",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 15,
+    "fields": {
+      "main_category": 3,
+      "sub_cat_name": "Activity Books",
+      "sub_cat_slug": "activity-books",
+      "sub_cat_image": "ecommerce/sub_category_images/activity-books.jpg",
+      "sub_cat_icon": "fa-solid fa-pencil",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 16,
+    "fields": {
+      "main_category": 4,
+      "sub_cat_name": "Coming-of-Age",
+      "sub_cat_slug": "coming-of-age",
+      "sub_cat_image": "ecommerce/sub_category_images/coming-of-age.jpg",
+      "sub_cat_icon": "fa-solid fa-child-reaching",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 17,
+    "fields": {
+      "main_category": 4,
+      "sub_cat_name": "Teen Romance",
+      "sub_cat_slug": "teen-romance",
+      "sub_cat_image": "ecommerce/sub_category_images/teen-romance.jpg",
+      "sub_cat_icon": "fa-solid fa-heart-circle-plus",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 18,
+    "fields": {
+      "main_category": 4,
+      "sub_cat_name": "Fantasy & Sci-Fi",
+      "sub_cat_slug": "fantasy-sci-fi",
+      "sub_cat_image": "ecommerce/sub_category_images/fantasy-sci-fi.jpg",
+      "sub_cat_icon": "fa-solid fa-dragon",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 19,
+    "fields": {
+      "main_category": 4,
+      "sub_cat_name": "School Life",
+      "sub_cat_slug": "school-life",
+      "sub_cat_image": "ecommerce/sub_category_images/school-life.jpg",
+      "sub_cat_icon": "fa-solid fa-school",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 20,
+    "fields": {
+      "main_category": 4,
+      "sub_cat_name": "Friendship",
+      "sub_cat_slug": "friendship",
+      "sub_cat_image": "ecommerce/sub_category_images/friendship.jpg",
+      "sub_cat_icon": "fa-solid fa-people-group",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 21,
+    "fields": {
+      "main_category": 5,
+      "sub_cat_name": "School Textbooks",
+      "sub_cat_slug": "school-textbooks",
+      "sub_cat_image": "ecommerce/sub_category_images/school-textbooks.jpg",
+      "sub_cat_icon": "fa-solid fa-book",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 22,
+    "fields": {
+      "main_category": 5,
+      "sub_cat_name": "College & University",
+      "sub_cat_slug": "college-university",
+      "sub_cat_image": "ecommerce/sub_category_images/college-university.jpg",
+      "sub_cat_icon": "fa-solid fa-user-graduate",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 23,
+    "fields": {
+      "main_category": 5,
+      "sub_cat_name": "Science",
+      "sub_cat_slug": "science",
+      "sub_cat_image": "ecommerce/sub_category_images/science.jpg",
+      "sub_cat_icon": "fa-solid fa-atom",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 24,
+    "fields": {
+      "main_category": 5,
+      "sub_cat_name": "Commerce & Business",
+      "sub_cat_slug": "commerce-business",
+      "sub_cat_image": "ecommerce/sub_category_images/commerce-business.jpg",
+      "sub_cat_icon": "fa-solid fa-chart-simple",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 25,
+    "fields": {
+      "main_category": 5,
+      "sub_cat_name": "Engineering",
+      "sub_cat_slug": "engineering",
+      "sub_cat_image": "ecommerce/sub_category_images/engineering.jpg",
+      "sub_cat_icon": "fa-solid fa-gears",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 26,
+    "fields": {
+      "main_category": 6,
+      "sub_cat_name": "Physics",
+      "sub_cat_slug": "physics",
+      "sub_cat_image": "ecommerce/sub_category_images/physics.jpg",
+      "sub_cat_icon": "fa-solid fa-magnet",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 27,
+    "fields": {
+      "main_category": 6,
+      "sub_cat_name": "Chemistry",
+      "sub_cat_slug": "chemistry",
+      "sub_cat_image": "ecommerce/sub_category_images/chemistry.jpg",
+      "sub_cat_icon": "fa-solid fa-flask-vial",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 28,
+    "fields": {
+      "main_category": 6,
+      "sub_cat_name": "Biology",
+      "sub_cat_slug": "biology",
+      "sub_cat_image": "ecommerce/sub_category_images/biology.jpg",
+      "sub_cat_icon": "fa-solid fa-dna",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 29,
+    "fields": {
+      "main_category": 6,
+      "sub_cat_name": "Computer Science",
+      "sub_cat_slug": "computer-science",
+      "sub_cat_image": "ecommerce/sub_category_images/computer-science.jpg",
+      "sub_cat_icon": "fa-solid fa-computer",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 30,
+    "fields": {
+      "main_category": 6,
+      "sub_cat_name": "Space & Astronomy",
+      "sub_cat_slug": "space-astronomy",
+      "sub_cat_image": "ecommerce/sub_category_images/space-astronomy.jpg",
+      "sub_cat_icon": "fa-solid fa-planet-ringed",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 31,
+    "fields": {
+      "main_category": 7,
+      "sub_cat_name": "Entrepreneurship",
+      "sub_cat_slug": "entrepreneurship",
+      "sub_cat_image": "ecommerce/sub_category_images/entrepreneurship.jpg",
+      "sub_cat_icon": "fa-solid fa-lightbulb",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 32,
+    "fields": {
+      "main_category": 7,
+      "sub_cat_name": "Management",
+      "sub_cat_slug": "management",
+      "sub_cat_image": "ecommerce/sub_category_images/management.jpg",
+      "sub_cat_icon": "fa-solid fa-people-roof",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 33,
+    "fields": {
+      "main_category": 7,
+      "sub_cat_name": "Marketing",
+      "sub_cat_slug": "marketing",
+      "sub_cat_image": "ecommerce/sub_category_images/marketing.jpg",
+      "sub_cat_icon": "fa-solid fa-bullhorn",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 34,
+    "fields": {
+      "main_category": 7,
+      "sub_cat_name": "Finance & Investment",
+      "sub_cat_slug": "finance-investment",
+      "sub_cat_image": "ecommerce/sub_category_images/finance-investment.jpg",
+      "sub_cat_icon": "fa-solid fa-coins",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 35,
+    "fields": {
+      "main_category": 7,
+      "sub_cat_name": "Economics",
+      "sub_cat_slug": "economics",
+      "sub_cat_image": "ecommerce/sub_category_images/economics.jpg",
+      "sub_cat_icon": "fa-solid fa-money-bill-trend-up",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 36,
+    "fields": {
+      "main_category": 8,
+      "sub_cat_name": "Motivation",
+      "sub_cat_slug": "motivation",
+      "sub_cat_image": "ecommerce/sub_category_images/motivation.jpg",
+      "sub_cat_icon": "fa-solid fa-fire",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 37,
+    "fields": {
+      "main_category": 8,
+      "sub_cat_name": "Time Management",
+      "sub_cat_slug": "time-management",
+      "sub_cat_image": "ecommerce/sub_category_images/time-management.jpg",
+      "sub_cat_icon": "fa-solid fa-hourglass-half",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 38,
+    "fields": {
+      "main_category": 8,
+      "sub_cat_name": "Productivity",
+      "sub_cat_slug": "productivity",
+      "sub_cat_image": "ecommerce/sub_category_images/productivity.jpg",
+      "sub_cat_icon": "fa-solid fa-bolt",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 39,
+    "fields": {
+      "main_category": 8,
+      "sub_cat_name": "Leadership",
+      "sub_cat_slug": "leadership",
+      "sub_cat_image": "ecommerce/sub_category_images/leadership.jpg",
+      "sub_cat_icon": "fa-solid fa-chess-king",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 40,
+    "fields": {
+      "main_category": 8,
+      "sub_cat_name": "Confidence Building",
+      "sub_cat_slug": "confidence-building",
+      "sub_cat_image": "ecommerce/sub_category_images/confidence-building.jpg",
+      "sub_cat_icon": "fa-solid fa-face-smile",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 41,
+    "fields": {
+      "main_category": 9,
+      "sub_cat_name": "Islam",
+      "sub_cat_slug": "islam",
+      "sub_cat_image": "ecommerce/sub_category_images/islam.jpg",
+      "sub_cat_icon": "fa-solid fa-mosque",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 42,
+    "fields": {
+      "main_category": 9,
+      "sub_cat_name": "Christianity",
+      "sub_cat_slug": "christianity",
+      "sub_cat_image": "ecommerce/sub_category_images/christianity.jpg",
+      "sub_cat_icon": "fa-solid fa-church",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 43,
+    "fields": {
+      "main_category": 9,
+      "sub_cat_name": "Hinduism",
+      "sub_cat_slug": "hinduism",
+      "sub_cat_image": "ecommerce/sub_category_images/hinduism.jpg",
+      "sub_cat_icon": "fa-solid fa-om",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 44,
+    "fields": {
+      "main_category": 9,
+      "sub_cat_name": "Buddhism",
+      "sub_cat_slug": "buddhism",
+      "sub_cat_image": "ecommerce/sub_category_images/buddhism.jpg",
+      "sub_cat_icon": "fa-solid fa-yin-yang",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 45,
+    "fields": {
+      "main_category": 9,
+      "sub_cat_name": "Spiritual Practices",
+      "sub_cat_slug": "spiritual-practices",
+      "sub_cat_image": "ecommerce/sub_category_images/spiritual-practices.jpg",
+      "sub_cat_icon": "fa-solid fa-spa",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 46,
+    "fields": {
+      "main_category": 10,
+      "sub_cat_name": "Diet & Nutrition",
+      "sub_cat_slug": "diet-nutrition",
+      "sub_cat_image": "ecommerce/sub_category_images/diet-nutrition.jpg",
+      "sub_cat_icon": "fa-solid fa-apple-whole",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 47,
+    "fields": {
+      "main_category": 10,
+      "sub_cat_name": "Fitness",
+      "sub_cat_slug": "fitness",
+      "sub_cat_image": "ecommerce/sub_category_images/fitness.jpg",
+      "sub_cat_icon": "fa-solid fa-dumbbell",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 48,
+    "fields": {
+      "main_category": 10,
+      "sub_cat_name": "Mental Health",
+      "sub_cat_slug": "mental-health",
+      "sub_cat_image": "ecommerce/sub_category_images/mental-health.jpg",
+      "sub_cat_icon": "fa-solid fa-brain",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 49,
+    "fields": {
+      "main_category": 10,
+      "sub_cat_name": "Yoga",
+      "sub_cat_slug": "yoga",
+      "sub_cat_image": "ecommerce/sub_category_images/yoga.jpg",
+      "sub_cat_icon": "fa-solid fa-person-praying",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 50,
+    "fields": {
+      "main_category": 10,
+      "sub_cat_name": "Parenting",
+      "sub_cat_slug": "parenting",
+      "sub_cat_image": "ecommerce/sub_category_images/parenting.jpg",
+      "sub_cat_icon": "fa-solid fa-children",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 51,
+    "fields": {
+      "main_category": 11,
+      "sub_cat_name": "Bengali Cuisine",
+      "sub_cat_slug": "bengali-cuisine",
+      "sub_cat_image": "ecommerce/sub_category_images/bengali-cuisine.jpg",
+      "sub_cat_icon": "fa-solid fa-bowl-rice",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 52,
+    "fields": {
+      "main_category": 11,
+      "sub_cat_name": "Baking",
+      "sub_cat_slug": "baking",
+      "sub_cat_image": "ecommerce/sub_category_images/baking.jpg",
+      "sub_cat_icon": "fa-solid fa-cake-candles",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 53,
+    "fields": {
+      "main_category": 11,
+      "sub_cat_name": "Vegetarian",
+      "sub_cat_slug": "vegetarian",
+      "sub_cat_image": "ecommerce/sub_category_images/vegetarian.jpg",
+      "sub_cat_icon": "fa-solid fa-leaf",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 54,
+    "fields": {
+      "main_category": 11,
+      "sub_cat_name": "Healthy Recipes",
+      "sub_cat_slug": "healthy-recipes",
+      "sub_cat_image": "ecommerce/sub_category_images/healthy-recipes.jpg",
+      "sub_cat_icon": "fa-solid fa-carrot",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 55,
+    "fields": {
+      "main_category": 11,
+      "sub_cat_name": "Quick Meals",
+      "sub_cat_slug": "quick-meals",
+      "sub_cat_image": "ecommerce/sub_category_images/quick-meals.jpg",
+      "sub_cat_icon": "fa-solid fa-clock",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 56,
+    "fields": {
+      "main_category": 12,
+      "sub_cat_name": "Drawing",
+      "sub_cat_slug": "drawing",
+      "sub_cat_image": "ecommerce/sub_category_images/drawing.jpg",
+      "sub_cat_icon": "fa-solid fa-pencil",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 57,
+    "fields": {
+      "main_category": 12,
+      "sub_cat_name": "Photography",
+      "sub_cat_slug": "photography",
+      "sub_cat_image": "ecommerce/sub_category_images/photography.jpg",
+      "sub_cat_icon": "fa-solid fa-camera",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 58,
+    "fields": {
+      "main_category": 12,
+      "sub_cat_name": "Art History",
+      "sub_cat_slug": "art-history",
+      "sub_cat_image": "ecommerce/sub_category_images/art-history.jpg",
+      "sub_cat_icon": "fa-solid fa-landmark",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 59,
+    "fields": {
+      "main_category": 12,
+      "sub_cat_name": "Graphic Design",
+      "sub_cat_slug": "graphic-design",
+      "sub_cat_image": "ecommerce/sub_category_images/graphic-design.jpg",
+      "sub_cat_icon": "fa-solid fa-compass-drafting",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 60,
+    "fields": {
+      "main_category": 12,
+      "sub_cat_name": "Architecture",
+      "sub_cat_slug": "architecture",
+      "sub_cat_image": "ecommerce/sub_category_images/architecture.jpg",
+      "sub_cat_icon": "fa-solid fa-building",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 61,
+    "fields": {
+      "main_category": 13,
+      "sub_cat_name": "Manga",
+      "sub_cat_slug": "manga",
+      "sub_cat_image": "ecommerce/sub_category_images/manga.jpg",
+      "sub_cat_icon": "fa-solid fa-dragon",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 62,
+    "fields": {
+      "main_category": 13,
+      "sub_cat_name": "Superheroes",
+      "sub_cat_slug": "superheroes",
+      "sub_cat_image": "ecommerce/sub_category_images/superheroes.jpg",
+      "sub_cat_icon": "fa-solid fa-mask",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 63,
+    "fields": {
+      "main_category": 13,
+      "sub_cat_name": "Fantasy",
+      "sub_cat_slug": "fantasy",
+      "sub_cat_image": "ecommerce/sub_category_images/fantasy.jpg",
+      "sub_cat_icon": "fa-solid fa-hat-wizard",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 64,
+    "fields": {
+      "main_category": 13,
+      "sub_cat_name": "Horror",
+      "sub_cat_slug": "horror",
+      "sub_cat_image": "ecommerce/sub_category_images/horror.jpg",
+      "sub_cat_icon": "fa-solid fa-ghost",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 65,
+    "fields": {
+      "main_category": 13,
+      "sub_cat_name": "Political Satire",
+      "sub_cat_slug": "political-satire",
+      "sub_cat_image": "ecommerce/sub_category_images/political-satire.jpg",
+      "sub_cat_icon": "fa-solid fa-scale-unbalanced",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 66,
+    "fields": {
+      "main_category": 14,
+      "sub_cat_name": "Bengali Poetry",
+      "sub_cat_slug": "bengali-poetry",
+      "sub_cat_image": "ecommerce/sub_category_images/bengali-poetry.jpg",
+      "sub_cat_icon": "fa-solid fa-language",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 67,
+    "fields": {
+      "main_category": 14,
+      "sub_cat_name": "English Poetry",
+      "sub_cat_slug": "english-poetry",
+      "sub_cat_image": "ecommerce/sub_category_images/english-poetry.jpg",
+      "sub_cat_icon": "fa-solid fa-book",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 68,
+    "fields": {
+      "main_category": 14,
+      "sub_cat_name": "Romantic Poetry",
+      "sub_cat_slug": "romantic-poetry",
+      "sub_cat_image": "ecommerce/sub_category_images/romantic-poetry.jpg",
+      "sub_cat_icon": "fa-solid fa-heart",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 69,
+    "fields": {
+      "main_category": 14,
+      "sub_cat_name": "Nature Poetry",
+      "sub_cat_slug": "nature-poetry",
+      "sub_cat_image": "ecommerce/sub_category_images/nature-poetry.jpg",
+      "sub_cat_icon": "fa-solid fa-tree",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 70,
+    "fields": {
+      "main_category": 14,
+      "sub_cat_name": "Modern Poetry",
+      "sub_cat_slug": "modern-poetry",
+      "sub_cat_image": "ecommerce/sub_category_images/modern-poetry.jpg",
+      "sub_cat_icon": "fa-solid fa-pen-fancy",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 71,
+    "fields": {
+      "main_category": 15,
+      "sub_cat_name": "World History",
+      "sub_cat_slug": "world-history",
+      "sub_cat_image": "ecommerce/sub_category_images/world-history.jpg",
+      "sub_cat_icon": "fa-solid fa-globe",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 72,
+    "fields": {
+      "main_category": 15,
+      "sub_cat_name": "South Asian History",
+      "sub_cat_slug": "south-asian-history",
+      "sub_cat_image": "ecommerce/sub_category_images/south-asian-history.jpg",
+      "sub_cat_icon": "fa-solid fa-map-location-dot",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 73,
+    "fields": {
+      "main_category": 15,
+      "sub_cat_name": "Islamic History",
+      "sub_cat_slug": "islamic-history",
+      "sub_cat_image": "ecommerce/sub_category_images/islamic-history.jpg",
+      "sub_cat_icon": "fa-solid fa-mosque",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 74,
+    "fields": {
+      "main_category": 15,
+      "sub_cat_name": "Ancient Civilizations",
+      "sub_cat_slug": "ancient-civilizations",
+      "sub_cat_image": "ecommerce/sub_category_images/ancient-civilizations.jpg",
+      "sub_cat_icon": "fa-solid fa-scroll",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 75,
+    "fields": {
+      "main_category": 15,
+      "sub_cat_name": "War History",
+      "sub_cat_slug": "war-history",
+      "sub_cat_image": "ecommerce/sub_category_images/war-history.jpg",
+      "sub_cat_icon": "fa-solid fa-helmet-battle",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 76,
+    "fields": {
+      "main_category": 16,
+      "sub_cat_name": "Bengali Literature",
+      "sub_cat_slug": "bengali-literature",
+      "sub_cat_image": "ecommerce/sub_category_images/bengali-literature.jpg",
+      "sub_cat_icon": "fa-solid fa-book",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 77,
+    "fields": {
+      "main_category": 16,
+      "sub_cat_name": "English Literature",
+      "sub_cat_slug": "english-literature",
+      "sub_cat_image": "ecommerce/sub_category_images/english-literature.jpg",
+      "sub_cat_icon": "fa-solid fa-book-open",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 78,
+    "fields": {
+      "main_category": 16,
+      "sub_cat_name": "Language Learning",
+      "sub_cat_slug": "language-learning",
+      "sub_cat_image": "ecommerce/sub_category_images/language-learning.jpg",
+      "sub_cat_icon": "fa-solid fa-comments",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 79,
+    "fields": {
+      "main_category": 16,
+      "sub_cat_name": "Grammar",
+      "sub_cat_slug": "grammar",
+      "sub_cat_image": "ecommerce/sub_category_images/grammar.jpg",
+      "sub_cat_icon": "fa-solid fa-spell-check",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 80,
+    "fields": {
+      "main_category": 16,
+      "sub_cat_name": "Literary Theory",
+      "sub_cat_slug": "literary-theory",
+      "sub_cat_image": "ecommerce/sub_category_images/literary-theory.jpg",
+      "sub_cat_icon": "fa-solid fa-quote-left",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 81,
+    "fields": {
+      "main_category": 17,
+      "sub_cat_name": "Criminal Law",
+      "sub_cat_slug": "criminal-law",
+      "sub_cat_image": "ecommerce/sub_category_images/criminal-law.jpg",
+      "sub_cat_icon": "fa-solid fa-handcuffs",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 82,
+    "fields": {
+      "main_category": 17,
+      "sub_cat_name": "Civil Law",
+      "sub_cat_slug": "civil-law",
+      "sub_cat_image": "ecommerce/sub_category_images/civil-law.jpg",
+      "sub_cat_icon": "fa-solid fa-scale-balanced",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 83,
+    "fields": {
+      "main_category": 17,
+      "sub_cat_name": "Business Law",
+      "sub_cat_slug": "business-law",
+      "sub_cat_image": "ecommerce/sub_category_images/business-law.jpg",
+      "sub_cat_icon": "fa-solid fa-briefcase",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 84,
+    "fields": {
+      "main_category": 17,
+      "sub_cat_name": "Forensics",
+      "sub_cat_slug": "forensics",
+      "sub_cat_image": "ecommerce/sub_category_images/forensics.jpg",
+      "sub_cat_icon": "fa-solid fa-fingerprint",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 85,
+    "fields": {
+      "main_category": 17,
+      "sub_cat_name": "Human Rights",
+      "sub_cat_slug": "human-rights",
+      "sub_cat_image": "ecommerce/sub_category_images/human-rights.jpg",
+      "sub_cat_icon": "fa-solid fa-handshake",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 86,
+    "fields": {
+      "main_category": 18,
+      "sub_cat_name": "Political Theory",
+      "sub_cat_slug": "political-theory",
+      "sub_cat_image": "ecommerce/sub_category_images/political-theory.jpg",
+      "sub_cat_icon": "fa-solid fa-chess-board",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 87,
+    "fields": {
+      "main_category": 18,
+      "sub_cat_name": "Global Politics",
+      "sub_cat_slug": "global-politics",
+      "sub_cat_image": "ecommerce/sub_category_images/global-politics.jpg",
+      "sub_cat_icon": "fa-solid fa-earth-americas",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 88,
+    "fields": {
+      "main_category": 18,
+      "sub_cat_name": "Public Policy",
+      "sub_cat_slug": "public-policy",
+      "sub_cat_image": "ecommerce/sub_category_images/public-policy.jpg",
+      "sub_cat_icon": "fa-solid fa-file-contract",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 89,
+    "fields": {
+      "main_category": 18,
+      "sub_cat_name": "Conflict Studies",
+      "sub_cat_slug": "conflict-studies",
+      "sub_cat_image": "ecommerce/sub_category_images/conflict-studies.jpg",
+      "sub_cat_icon": "fa-solid fa-peace",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 90,
+    "fields": {
+      "main_category": 18,
+      "sub_cat_name": "Diplomacy",
+      "sub_cat_slug": "diplomacy",
+      "sub_cat_image": "ecommerce/sub_category_images/diplomacy.jpg",
+      "sub_cat_icon": "fa-solid fa-flag",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 91,
+    "fields": {
+      "main_category": 19,
+      "sub_cat_name": "Travel Guides",
+      "sub_cat_slug": "travel-guides",
+      "sub_cat_image": "ecommerce/sub_category_images/travel-guides.jpg",
+      "sub_cat_icon": "fa-solid fa-book-open",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 92,
+    "fields": {
+      "main_category": 19,
+      "sub_cat_name": "Adventure Stories",
+      "sub_cat_slug": "adventure-stories",
+      "sub_cat_image": "ecommerce/sub_category_images/adventure-stories.jpg",
+      "sub_cat_icon": "fa-solid fa-mountain-sun",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 93,
+    "fields": {
+      "main_category": 19,
+      "sub_cat_name": "Backpacking",
+      "sub_cat_slug": "backpacking",
+      "sub_cat_image": "ecommerce/sub_category_images/backpacking.jpg",
+      "sub_cat_icon": "fa-solid fa-person-hiking",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 94,
+    "fields": {
+      "main_category": 19,
+      "sub_cat_name": "Cultural Exploration",
+      "sub_cat_slug": "cultural-exploration",
+      "sub_cat_image": "ecommerce/sub_category_images/cultural-exploration.jpg",
+      "sub_cat_icon": "fa-solid fa-masks-theater",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 95,
+    "fields": {
+      "main_category": 19,
+      "sub_cat_name": "World Cities",
+      "sub_cat_slug": "world-cities",
+      "sub_cat_image": "ecommerce/sub_category_images/world-cities.jpg",
+      "sub_cat_icon": "fa-solid fa-city",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 96,
+    "fields": {
+      "main_category": 20,
+      "sub_cat_name": "DIY Projects",
+      "sub_cat_slug": "diy-projects",
+      "sub_cat_image": "ecommerce/sub_category_images/diy-projects.jpg",
+      "sub_cat_icon": "fa-solid fa-screwdriver-wrench",
+      "sub_cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 97,
+    "fields": {
+      "main_category": 20,
+      "sub_cat_name": "Gardening",
+      "sub_cat_slug": "gardening",
+      "sub_cat_image": "ecommerce/sub_category_images/gardening.jpg",
+      "sub_cat_icon": "fa-solid fa-seedling",
+      "sub_cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 98,
+    "fields": {
+      "main_category": 20,
+      "sub_cat_name": "Interior Design",
+      "sub_cat_slug": "interior-design",
+      "sub_cat_image": "ecommerce/sub_category_images/interior-design.jpg",
+      "sub_cat_icon": "fa-solid fa-couch",
+      "sub_cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 99,
+    "fields": {
+      "main_category": 20,
+      "sub_cat_name": "Fashion",
+      "sub_cat_slug": "fashion",
+      "sub_cat_image": "ecommerce/sub_category_images/fashion.jpg",
+      "sub_cat_icon": "fa-solid fa-shirt",
+      "sub_cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productsubcategory",
+    "pk": 100,
+    "fields": {
+      "main_category": 20,
+      "sub_cat_name": "Pet Care",
+      "sub_cat_slug": "pet-care",
+      "sub_cat_image": "ecommerce/sub_category_images/pet-care.jpg",
+      "sub_cat_icon": "fa-solid fa-paw",
+      "sub_cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  }
+]

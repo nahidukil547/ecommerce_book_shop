@@ -1,0 +1,354 @@
+[
+  {
+    "model": "bookshopeapp.author",
+    "pk": 1,
+    "fields": {
+      "author_name": "J.K. Rowling",
+      "author_slug": "jk-rowling",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1965-07-31",
+      "description": "J.K. Rowling is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 2,
+    "fields": {
+      "author_name": "George R.R. Martin",
+      "author_slug": "george-rr-martin",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1948-09-20",
+      "description": "George R.R. Martin is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 3,
+    "fields": {
+      "author_name": "Stephen King",
+      "author_slug": "stephen-king",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1947-09-21",
+      "description": "Stephen King is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 4,
+    "fields": {
+      "author_name": "Haruki Murakami",
+      "author_slug": "haruki-murakami",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1949-01-12",
+      "description": "Haruki Murakami is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 5,
+    "fields": {
+      "author_name": "Paulo Coelho",
+      "author_slug": "paulo-coelho",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1947-08-24",
+      "description": "Paulo Coelho is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 6,
+    "fields": {
+      "author_name": "Khaled Hosseini",
+      "author_slug": "khaled-hosseini",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1965-03-04",
+      "description": "Khaled Hosseini is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 7,
+    "fields": {
+      "author_name": "Dan Brown",
+      "author_slug": "dan-brown",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1964-06-22",
+      "description": "Dan Brown is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 8,
+    "fields": {
+      "author_name": "Agatha Christie",
+      "author_slug": "agatha-christie",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1890-09-15",
+      "description": "Agatha Christie is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 9,
+    "fields": {
+      "author_name": "Jane Austen",
+      "author_slug": "jane-austen",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1775-12-16",
+      "description": "Jane Austen is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 10,
+    "fields": {
+      "author_name": "Leo Tolstoy",
+      "author_slug": "leo-tolstoy",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1828-09-09",
+      "description": "Leo Tolstoy is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 11,
+    "fields": {
+      "author_name": "Mark Twain",
+      "author_slug": "mark-twain",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1835-11-30",
+      "description": "Mark Twain is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 12,
+    "fields": {
+      "author_name": "Fyodor Dostoevsky",
+      "author_slug": "fyodor-dostoevsky",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1821-11-11",
+      "description": "Fyodor Dostoevsky is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 13,
+    "fields": {
+      "author_name": "Ernest Hemingway",
+      "author_slug": "ernest-hemingway",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1899-07-21",
+      "description": "Ernest Hemingway is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 14,
+    "fields": {
+      "author_name": "J.R.R. Tolkien",
+      "author_slug": "jrr-tolkien",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1892-01-03",
+      "description": "J.R.R. Tolkien is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 16,
+    "fields": {
+      "author_name": "Oscar Wilde",
+      "author_slug": "oscar-wilde",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1854-10-16",
+      "description": "Oscar Wilde is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 18,
+    "fields": {
+      "author_name": "Charles Dickens",
+      "author_slug": "charles-dickens",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1812-02-07",
+      "description": "Charles Dickens is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 19,
+    "fields": {
+      "author_name": "Virginia Woolf",
+      "author_slug": "virginia-woolf",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1882-01-25",
+      "description": "Virginia Woolf is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 20,
+    "fields": {
+      "author_name": "Arthur Conan Doyle",
+      "author_slug": "arthur-conan-doyle",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1859-05-22",
+      "description": "Arthur Conan Doyle is a renowned author known for impactful and influential writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T18:31:30.715071",
+      "updated_at": "2025-07-09T18:31:30.715071",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 21,
+    "fields": {
+      "author_name": "Humayun Ahmed",
+      "author_slug": "humayun-ahmed",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1961-05-02",
+      "description": "Renowned Bangladeshi author known for contemporary fiction and drama.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T20:46:52.807628",
+      "updated_at": "2025-07-09T20:46:52.807628",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 22,
+    "fields": {
+      "author_name": "Muhammed Zafar Iqbal",
+      "author_slug": "muhammed-zafar-iqbal",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1961-07-28",
+      "description": "Popular Bangladeshi author of science fiction and children's literature.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T20:46:52.807628",
+      "updated_at": "2025-07-09T20:46:52.807628",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 23,
+    "fields": {
+      "author_name": "Taslima Nasrin",
+      "author_slug": "taslima-nasrin",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1978-04-23",
+      "description": "Noted Bangladeshi author known for autobiographical and controversial writing.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T20:46:52.807628",
+      "updated_at": "2025-07-09T20:46:52.807628",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.author",
+    "pk": 24,
+    "fields": {
+      "author_name": "Anisul Hoque",
+      "author_slug": "anisul-hoque",
+      "author_image": "ecommerce/author_image/default.jpg",
+      "dob": "1969-03-07",
+      "description": "Bangladeshi author and journalist known for novels and biographies.",
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2025-07-09T20:46:52.807628",
+      "updated_at": "2025-07-09T20:46:52.807628",
+      "is_active": true
+    }
+  }
+]

@@ -1,0 +1,183 @@
+{% extends "base/index.html" %}
+{% block linkcss %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />{% endblock linkcss %}
+{% block content %}
+
+    <title>Premium Wireless Headphones - Product Details</title>
+
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+
+        <!-- Product Container -->
+        <div class="product-container">
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                {% comment %} <img src="https://picsum.photos/200/300/?blur=2" alt="Premium Wireless Headphones" class="main-image" id="mainImage">
+                <div class="thumbnail-container">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="Headphones view 1" class="thumbnail active" data-src="https://picsum.photos/seed/picsum/200/300">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="Headphones view 2" class="thumbnail" data-src="https://picsum.photos/seed/picsum/200/300">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="Headphones view 3" class="thumbnail" data-src="https://picsum.photos/seed/picsum/200/300">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="Headphones view 4" class="thumbnail" data-src="https://picsum.photos/seed/picsum/200/300">
+                </div> {% endcomment %}
+            </div>
+
+            <!-- Product Info -->
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="product-info">
+                    {% comment %} <span class="product-badge">Best Seller</span> {% endcomment %}
+                    <h1 class="product-title">{{product.product_name}}</h1>
+                    <div class="product-rating">
+                        
+                        <span class="rating-text"> By {{product.author.author_name}} reviews</span>
+                    </div>
+                    <div class="product-rating">
+                        
+                        <span class="rating-text"> • {{product.total_views}} reviews</span>
+                    </div>
+
+                    <div class="price-container">
+                        <span class="current-price" id="currentPrice"></span>
+                        <span class="original-price" id="originalPrice" data-price="{{product.price}}">{{product.price}}</span>
+                        <span class="discount" id="discountPercent" data-discount="{{product.discount_percentage}}">{{product.discount_percentage}}% OFF</span>
+                    </div>
+
+                    <p class="product-description">
+                        {{product.description}}
+                    </p>
+
+                    <div class="options-container">
+                        <div class="option-group">
+                            <label class="option-label">Stock</label>
+                            <div class="option-buttons">
+                                <span class="option-label discount stock" id='stock' data-option="storage" data-value="premium">{{product.stock}}</span>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="add-cart-box">
+                            <div class="product-qty-box quantity-container">
+                                <label class="option-label">Quantity</label>
+                                <div class="quantity-selector">
+                                    <button type="button" id="decrement" class="decrement quantity-btn"><span> - </span></button>
+                                    <input type="number" id="cart_qty" 
+                                    name="quantity"
+                                    class="cart_qty cart_qty__{{ product.id }} quantity-input" 
+                                    min="1" max="50" data-product-id="{{ product.id }}" 
+                                    value="{{ product.product_cart.quantity|default:'1' }}">
+
+                                    <button type="button" id="increment" class="increment quantity-btn"><span> + </span></button>
+                                </div>
+                            </div>
+                            <div class="product-addtocart-box action-buttons">
+                                <button type="submit" id="add_to_cart" class="add_to_cart btn btn-primary" data-product-id="{{ product.id }}">Add to Cart</button>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Features Grid -->
+        {% comment %} <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shipping-fast feature-icon"></i>
+                <h3 class="feature-title">Free Shipping</h3>
+                <p class="feature-description">Free shipping on orders over $100</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-undo feature-icon"></i>
+                <h3 class="feature-title">30-Day Returns</h3>
+                <p class="feature-description">Easy returns within 30 days</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3 class="feature-title">2-Year Warranty</h3>
+                <p class="feature-description">Comprehensive warranty coverage</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset feature-icon"></i>
+                <h3 class="feature-title">24/7 Support</h3>
+                <p class="feature-description">Round-the-clock customer support</p>
+            </div>
+        </div> {% endcomment %}
+
+        <!-- Reviews Section -->
+        {% comment %} <div class="reviews-section">
+            <h2 class="section-title">Customer Reviews</h2>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JD</div>
+                    <div class="reviewer-info">
+                        <h4>John Doe</h4>
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                        <span class="review-date">2 days ago</span>
+                    </div>
+                </div>
+                <p>Absolutely amazing headphones! The sound quality is incredible and the noise cancellation works perfectly. 
+                   Battery life is exactly as advertised. Highly recommended!</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SM</div>
+                    <div class="reviewer-info">
+                        <h4>Sarah Miller</h4>
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="far fa-star star"></i>
+                        </div>
+                        <span class="review-date">1 week ago</span>
+                    </div>
+                </div>
+                <p>Great build quality and comfort. Perfect for long work sessions. The only minor issue is that they can get 
+                   a bit warm after extended use, but overall excellent product.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MJ</div>
+                    <div class="reviewer-info">
+                        <h4>Mike Johnson</h4>
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                        <span class="review-date">2 weeks ago</span>
+                    </div>
+                </div>
+                <p>Best headphones I've ever owned! The wireless connection is stable, sound is crisp, and they're incredibly 
+                   comfortable. Worth every penny.</p>
+            </div>
+        </div> {% endcomment %}
+    </div>
+
+    <!-- Zoom Overlay -->
+    {% comment %} <div class="zoom-overlay" id="zoomOverlay">
+        <img src="/placeholder.svg" alt="Zoomed product image" class="zoom-image" id="zoomImage">
+    </div> {% endcomment %}
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText">Added to cart successfully!</span>
+    </div>
+
+{% endblock content %}

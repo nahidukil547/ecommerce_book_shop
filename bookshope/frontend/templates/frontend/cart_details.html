@@ -1,0 +1,97 @@
+{% extends "base/index.html" %}
+
+{% block content %}
+
+<div class="container">
+        
+        <form action="{% url "checkout" %}" method ='post' style="margin-top:100px">
+            {% csrf_token %}
+            <div class="cart-section">
+                
+                <div class="cart-items">
+                    {% for cart in cart_items %}
+                     <div class="cart-item cart_item__{{ cart.product.id }}">
+                        <div class="item-image">
+                            {% if cart.product.product_image %}
+                                <img src="{{ cart.product.product_image.url }}" alt="{{ cart.product.product_name }}">
+                            {% endif %}
+                        </div>
+                        <div class="item-details">
+                            <h5>{{ cart.product.product_name }}</h5>
+                            <p>{{ cart.product.description|truncatechars:10 }}</p>
+                        </div>
+                        <div class="price-container">
+                            <span class="current-price" id="currentPrice"><strong>{{ current_currency.currency_icon }} <span class="total_price__{{ cart.product.id }}">{{ cart.total_amount|default:0|floatformat:2 }}</span></strong></span>
+                            <span class="original-price" id="originalPrice" data-price="{{ cart.product.price }}">{{ cart.product.price }}</span>
+                            
+                            <span class="discount" id="discountPercent" data-discount="{{ cart.product.discount_percentage }}">{{ cart.product.discount_percentage }}% OFF</span>
+                            
+                        </div>
+                        <div class="quantity-controls pocket-product-qty">
+                            <button type="button" class="quantity-btn decrement">-</button>
+                            <input type="number" class="cart_qty cart_qty__{{ cart.product.id }}" min="0" max="50" data-product-id="{{ cart.product.id }}" value="{{ cart.quantity }}">
+                            <button type="button" class="quantity-btn increment">+</button>
+                        </div>
+                        <div class="action-box">
+                            <button type="button" class="remove-btn" id="delete_cart__{{ cart.product.id }}">Delete</button>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+                    <div id="emptyCartMessage" class="empty-cart" style="display: none;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your cart is empty.</h3>
+                        <p>Browse our products and add something to your cart!</p>
+                    </div>
+                </div>
+
+                <!-- Right: Order Summary -->
+                <div class="cart-summary">
+                    <h2 class="summary-title">Order Summary</h2>
+                    <div class="summary-row">
+                        <span>Name :</span>
+                        <span>{{user.customer.name}}</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phone :</span>
+                        <span>{{user.customer.phone}}</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span>{{ current_currency.currency_icon }} <span class="sub_total_amount">{{ amount_summary.sub_total_amount|default:'0'|floatformat:2 }}</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>VAT:</span>
+                        <span>{{ current_currency.currency_icon }} <span id="total_vat">{{ amount_summary.total_vat|default:'0'|floatformat:2 }}</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount:</span>
+                        <span>{{ current_currency.currency_icon }} <span id="total_discount">{{ amount_summary.total_discount|default:'0'|floatformat:2 }}</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total:</span>
+                        <span>{{ current_currency.currency_icon }} <span id="grand_total">{{ amount_summary.grand_total|default:'0'|floatformat:2 }}</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <input type="checkbox" name="payment_method" id="payment_method" value="ssl" checked>
+                        <label for="payment_method">SSL</label>
+                    </div>
+                    <div class="promo-section">
+                        <input type="text" name="billing_address" class="promo-input" placeholder="Enter Billing Address " id="promoInput">
+                    </div>
+                    <button type="submit" class="checkout-btn"><i class="fas fa-lock"></i> Secure Checkout</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+{% endblock content %}
+
+{% block footer %}
+
+{% include "base/footer.html" %}
+
+{% endblock footer %}
+

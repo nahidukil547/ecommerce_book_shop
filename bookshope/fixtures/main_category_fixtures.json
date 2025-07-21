@@ -1,0 +1,342 @@
+[
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 1,
+    "fields": {
+      "main_cat_name": "Fiction",
+      "cat_slug": "fiction",
+      "cat_image": "ecommerce/category_images/fiction.jpg",
+      "cat_icon": "fa-solid fa-book-open",
+      "description": "Imaginative stories created from the author's mind including novels, short stories, and novellas across various genres.",
+      "cat_ordering": 0,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 2,
+    "fields": {
+      "main_cat_name": "Non-Fiction",
+      "cat_slug": "non-fiction",
+      "cat_image": "ecommerce/category_images/non-fiction.jpg",
+      "cat_icon": "fa-solid fa-file-lines",
+      "description": "Factual literature based on real events, people, and information including biographies, history, and self-improvement.",
+      "cat_ordering": 1,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 3,
+    "fields": {
+      "main_cat_name": "Children\u2019s Books",
+      "cat_slug": "childrens-books",
+      "cat_image": "ecommerce/category_images/childrens-books.jpg",
+      "cat_icon": "fa-solid fa-apple-whole",
+      "description": "Literature specifically created for young readers from infants to pre-teens with age-appropriate content and illustrations.",
+      "cat_ordering": 2,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 4,
+    "fields": {
+      "main_cat_name": "Young Adult",
+      "cat_slug": "young-adult",
+      "cat_image": "ecommerce/category_images/young-adult.jpg",
+      "cat_icon": "fa-solid fa-graduation-cap",
+      "description": "Books targeted at teenagers and young adult readers featuring themes relevant to adolescent experiences.",
+      "cat_ordering": 3,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 5,
+    "fields": {
+      "main_cat_name": "Academic & Textbooks",
+      "cat_slug": "academic-textbooks",
+      "cat_image": "ecommerce/category_images/academic-textbooks.jpg",
+      "cat_icon": "fa-solid fa-building-columns",
+      "description": "Educational materials for formal learning environments including school textbooks and university-level resources.",
+      "cat_ordering": 4,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 6,
+    "fields": {
+      "main_cat_name": "Science & Technology",
+      "cat_slug": "science-technology",
+      "cat_image": "ecommerce/category_images/science-technology.jpg",
+      "cat_icon": "fa-solid fa-microscope",
+      "description": "Works exploring scientific principles, technological innovations, and their applications in modern society.",
+      "cat_ordering": 5,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 7,
+    "fields": {
+      "main_cat_name": "Business & Economics",
+      "cat_slug": "business-economics",
+      "cat_image": "ecommerce/category_images/business-economics.jpg",
+      "cat_icon": "fa-solid fa-chart-line",
+      "description": "Resources covering commercial activities, economic theories, financial systems, and organizational management.",
+      "cat_ordering": 6,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 8,
+    "fields": {
+      "main_cat_name": "Self-Help & Personal Development",
+      "cat_slug": "self-help-personal-development",
+      "cat_image": "ecommerce/category_images/self-help-personal-development.jpg",
+      "cat_icon": "fa-solid fa-person-rays",
+      "description": "Resources focused on improving personal skills, mindset, habits, and overall quality of life.",
+      "cat_ordering": 7,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 9,
+    "fields": {
+      "main_cat_name": "Religion & Spirituality",
+      "cat_slug": "religion-spirituality",
+      "cat_image": "ecommerce/category_images/religion-spirituality.jpg",
+      "cat_icon": "fa-solid fa-hands-praying",
+      "description": "Works exploring religious traditions, spiritual practices, sacred texts, and personal faith journeys.",
+      "cat_ordering": 8,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 10,
+    "fields": {
+      "main_cat_name": "Health & Wellness",
+      "cat_slug": "health-wellness",
+      "cat_image": "ecommerce/category_images/health-wellness.jpg",
+      "cat_icon": "fa-solid fa-heart-pulse",
+      "description": "Resources for physical, mental, and emotional well-being including fitness, nutrition, and self-care.",
+      "cat_ordering": 9,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 11,
+    "fields": {
+      "main_cat_name": "Cooking & Food",
+      "cat_slug": "cooking-food",
+      "cat_image": "ecommerce/category_images/cooking-food.jpg",
+      "cat_icon": "fa-solid fa-utensils",
+      "description": "Books about culinary techniques, recipes, food culture, and gastronomy from various traditions.",
+      "cat_ordering": 10,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 12,
+    "fields": {
+      "main_cat_name": "Art & Photography",
+      "cat_slug": "art-photography",
+      "cat_image": "ecommerce/category_images/art-photography.jpg",
+      "cat_icon": "fa-solid fa-palette",
+      "description": "Works covering visual arts, photography techniques, art history, and creative design principles.",
+      "cat_ordering": 11,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 13,
+    "fields": {
+      "main_cat_name": "Comics & Graphic Novels",
+      "cat_slug": "comics-graphic-novels",
+      "cat_image": "ecommerce/category_images/comics-graphic-novels.jpg",
+      "cat_icon": "fa-solid fa-book-open-reader",
+      "description": "Visual storytelling through sequential art including manga, superhero comics, and illustrated narratives.",
+      "cat_ordering": 12,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 14,
+    "fields": {
+      "main_cat_name": "Poetry",
+      "cat_slug": "poetry",
+      "cat_image": "ecommerce/category_images/poetry.jpg",
+      "cat_icon": "fa-solid fa-feather-pointed",
+      "description": "Literary works expressing emotions and ideas through distinctive style and rhythm in verse form.",
+      "cat_ordering": 13,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 15,
+    "fields": {
+      "main_cat_name": "History",
+      "cat_slug": "history",
+      "cat_image": "ecommerce/category_images/history.jpg",
+      "cat_icon": "fa-solid fa-landmark",
+      "description": "Records and analyses of past events, civilizations, and human experiences across different eras.",
+      "cat_ordering": 14,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 16,
+    "fields": {
+      "main_cat_name": "Language & Literature",
+      "cat_slug": "language-literature",
+      "cat_image": "ecommerce/category_images/language-literature.jpg",
+      "cat_icon": "fa-solid fa-language",
+      "description": "Studies of linguistic structures, literary works, critical theories, and language acquisition methods.",
+      "cat_ordering": 15,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 17,
+    "fields": {
+      "main_cat_name": "Law & Criminology",
+      "cat_slug": "law-criminology",
+      "cat_image": "ecommerce/category_images/law-criminology.jpg",
+      "cat_icon": "fa-solid fa-gavel",
+      "description": "Studies of legal systems, criminal behavior, forensic science, and human rights frameworks.",
+      "cat_ordering": 16,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 18,
+    "fields": {
+      "main_cat_name": "Politics & Current Affairs",
+      "cat_slug": "politics-current-affairs",
+      "cat_image": "ecommerce/category_images/politics-current-affairs.jpg",
+      "cat_icon": "fa-solid fa-newspaper",
+      "description": "Analysis of governance systems, political theories, global events, and contemporary societal issues.",
+      "cat_ordering": 17,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 19,
+    "fields": {
+      "main_cat_name": "Travel & Adventure",
+      "cat_slug": "travel-adventure",
+      "cat_image": "ecommerce/category_images/travel-adventure.jpg",
+      "cat_icon": "fa-solid fa-map-location-dot",
+      "description": "Explorations of destinations, cultures, and experiences through guides, memoirs, and adventure narratives.",
+      "cat_ordering": 18,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "bookshopeapp.productmaincategory",
+    "pk": 20,
+    "fields": {
+      "main_cat_name": "Crafts, Hobbies & Lifestyle",
+      "cat_slug": "crafts-hobbies-lifestyle",
+      "cat_image": "ecommerce/category_images/crafts-hobbies-lifestyle.jpg",
+      "cat_icon": "fa-solid fa-paintbrush",
+      "description": "Resources for creative pursuits, leisure activities, and personal lifestyle enhancement techniques.",
+      "cat_ordering": 19,
+      "created_by": 1,
+      "updated_by": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "is_active": true
+    }
+  }
+]

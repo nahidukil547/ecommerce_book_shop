@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %} Category Information {% endblock %}
+
+{% block content %}
+
+
+<div class="title-box">
+    <div class="title-box">
+        
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li><a href=""><span><img src="/static/images/icons/Home.svg" alt="more"></span>Home</a></li>
+                <li><a href="/backend/setting-dashboard/">Settings Dashboard </a></li>
+                <li><a href="{% url 'product_sub_category_list' %}">Sub Category List</a></li>
+                <li><a href="{% url 'add_product_sub_category' %}">Add New Category</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="main_content">
+    <div class="view_box mt-3" style="margin-bottom:15px;">
+        <div class="col-sm-12">
+            <div class="view_title">
+                <div class="purchase-request">
+                    <div class="prInformation">
+                        <h3>Category Basic Information</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-request">
+                <div class="prInformation" style="border-bottom:0px solid #ddd6d6; margin-bottom: 0px;">
+                    <h4 style="font-size: 13px;color: #000000;font-family: 'MontserratSemiBold';">
+                        {{ data.main_category.main_cat_name }}
+                    </h4>
+                </div>
+                <div class="prInformation">
+                <p>Sub Category Name: {{data.sub_cat_name}}</p>
+                
+                <div >
+                    <label for="details_image">Image:</label>
+                    <img class="details_image" name='details_image' src="{{ data.sub_cat_image.url }}" alt="{{data.main_cat_name}} image">
+                </div>
+                <p>category Creation Date: {{data.created_at|date:"F d, Y"|default:"Not set"}}</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+   
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+
+{% endblock %}

@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Books - Premium Book Collection</title>
+    <link rel="stylesheet" href=" {% static "/frontend/css/styles.css" %} ">
+    <link rel="stylesheet" href=" {% static "/frontend/css/product.css" %} ">
+    <link rel="stylesheet" href=" {% static "/frontend/css/cart_details.css" %} ">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/home/">
+                    <h2>Luxe<span>Books</span></h2>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="/home/" class="nav-link active">Home</a>
+                <a href="?contact/" class="nav-link">Contact</a>
+                
+                <!-- Category Dropdown -->
+                <div class="category-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger">
+                        Categories <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="category-grid">
+                                {% for main_cat in main_category %}
+                                    <div class="category-column">
+                                        <h4>{{ main_cat.main_cat_name|truncatechars:8 }}</h4>
+                                        <ul>
+                                            {% for sub_cat in main_cat.sub_categories.all %}
+                                                {% if sub_cat.is_active %}
+                                                    <li><a href=" ">{{ sub_cat.sub_cat_name|truncatechars:10  }}</a></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endfor %}
+                                <a href="">Explore More --></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                {% if user.is_authenticated %}
+                <div class="user-dropdown">
+                    <button class="user-btn">
+                        {{ user.customer.name }} <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="user-menu">
+                        <a href="">Profile</a>
+                        <form method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="logout-btn">Logout</button>
+                        </form>
+                    </div>
+                </div>
+                {% else %}
+                    <a href="{% url 'login' %}" class="nav-link" id="loginBtn">Login</a>
+                {% endif %}
+
+
+
+            </div>
+            
+            <!-- Header Actions -->
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" placeholder="Search books..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                  <div class="cart-container">
+                    <a href="{% url "cart_details" %}">
+
+                        <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count"></span>
+                    </a>
+                </div>  
+
+                    <!-- Cart Icon Bar -->
+                     {% comment %} <div class="cart-container">
+                        <button type="button" class="cart-qty-box btn btn-warning" id="cartToggleBtn">
+                            <i class="fas fa-shopping-cart cart-icon"></i>
+                            <span class="item-qty cart-count cart_item_quantity">{{ cart_item_count|default:0 }}</span>
+                        </button>
+                    </div> 
+
+                    <!-- Cart Pocket -->
+                    <div class="cart-pocket-box" id="cart-pocket-box" style="display: none;">
+                        <div class="cart-pocket-container" id="pocket-container">
+                            <div class="pocket-content">
+                                <div class="pocket-item">
+                                    <div class="pocket-list">
+                                        <table class="table-box">
+                                            {% for cart in cart_items %}
+                                            <tr class="cart_item__{{ cart.product.id }}">
+                                                <td>
+                                                    <div class="pocket-info-box">
+                                                        <div class="pocket-product-image">
+                                                            {% if cart.product.product_image %}
+                                                            <img src="{{ cart.product.product_image.url }}" alt="{{ cart.product.product_name }}">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="pocket-text">
+                                                            <p>{{ cart.product.product_name }}</p>
+                                                            <div class="pocket-product-qty">
+                                                                <button type="button" class="decrement">
+                                                                    -
+                                                                </button>
+                                                                <input type="number" class="cart_qty cart_qty__{{ cart.product.id }}" min="0" max="50" data-product-id="{{ cart.product.id }}" value="{{ cart.quantity }}">
+                                                                <button type="button" class="increment">
+                                                                   +
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="total_price__{{ cart.product.id }}">{{ cart.total_amount|default:0|floatformat:2 }}</span>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                    <div class="pocket-bottom">
+                                        <div class="pocket-item-info">
+                                            <div class="complete_order">
+                                                <a class="fico-btn" href="{% url 'cart_details' %}">COMPLETE YOUR ORDER</a>
+                                            </div>
+                                            <div class="basket-link">
+                                                <a href="{% url 'cart_details' %}">View your basket</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   {% endcomment %}
+
+  
+
+
+                 <!-- Cart Pocket Dropdown -->
+    
+
+
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+        {% if messages %}
+        <div class="message-wrapper">
+            {% for message in messages %}
+            <div class="message message-{{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% block content %}
+    
+        {% endblock content %}
+
+   
+    <!-- Footer -->
+    
+{% block footer %}
+    
+{% endblock footer %}
+    <!-- Login Modal -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="{% static "/frontend/js/script.js" %}"></script>
+    <script src="{% static "/frontend/js/product.js" %}"></script>
+    <script src="{% static "/frontend/js/cart.js" %}"></script>
+    {% comment %} <script src="{% static "/frontend/js/cart_details.js" %}"></script> {% endcomment %}
+
+{% block linkScript %}
+
+
+{% comment %} <script>
+    var swiper = new Swiper(".newCollections", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+        },
+    });
+</script> {% endcomment %}
+
+{% endblock %}
+
+</body>
+</html>

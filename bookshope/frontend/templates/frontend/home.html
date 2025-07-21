@@ -1,0 +1,137 @@
+{% extends "base/index.html" %}
+{% load static %}
+
+{% block content %}
+ 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Discover Your Next <span>Literary Adventure</span></h1>
+                <p class="hero-subtitle">Curated collection of premium books from world-renowned authors</p>
+                <button class="cta-button">Explore Collection</button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-books">
+                    <div class="book book-1"></div>
+                    <div class="book book-2"></div>
+                    <div class="book book-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Featured Authors -->
+    <section class="authors-section">
+        <div class="container">
+            <h2 class="section-title">Featured Authors</h2>
+            <div class="authors-grid">
+
+                {% for author in authors %}
+                <a href="">
+                    <div class="author-card">
+                        <div class="author-image">
+                            <img src="{{author.author_image.url}}" alt="Author">
+                        </div>
+                        <h3>{{author.author_name| truncatechars:15}}</h3>
+                        <p>{{author.description|truncatechars:15 }}</p>
+                        <div class="author-stats">
+                            <span>{{author.product_count}} Books</span>
+                            <span>★ 4.8</span>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+                <button class="cta-button ">Explore More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Of Books -->
+    <section class="bestsellers-section">
+        <div class="container">
+            <h2 class="section-title">Features Of Books </h2>
+            <div class="books-carousel">
+                {% for product in products %}
+                <a href="{% url "product_details" product.product_slug %}">
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="{{product.product_image.url}}" alt="{{product.product_name}}">
+                            <div class="book-overlay">
+                                <button class="quick-view">Quick View</button>
+                                {% comment %} <button class="add-to-cart">Add to Cart</button> {% endcomment %}
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.author.author_name}}</p>
+                            <div class="book-rating">
+                                {% comment %} <span class="stars">★★★★★</span> {% endcomment %}
+                                <span class="rating-count">Total Views : {{product.total_views}}</span>
+                            </div>
+                            <div class="book-price">
+                                <span class="current-price">${{product.price}}</span>
+                                {% comment %} <span class="original-price">$29.99</span> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+                <button class="cta-button ">Explore More</button>
+            </div>
+        </div>
+    </section>
+    <section class="bestsellers-section">
+        <div class="container">
+            <h2 class="section-title">Best Sellers</h2>
+            <div class="books-carousel">
+                {% for product in best_selling %}
+                    <a href="{% url "product_details" product.product_slug %}">
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="{{product.product_image.url}}" alt="{{product.product_name}}">
+                            <div class="book-overlay">
+                                <button class="quick-view">Quick View</button>
+                                {% comment %} <button class="add-to-cart">Add to Cart</button> {% endcomment %}
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.author.author_name}}</p>
+                            <div class="book-rating">
+                                {% comment %} <span class="stars">★★★★★</span> {% endcomment %}
+                                <span class="rating-count">Total Views : {{product.total_views}}</span>
+                            </div>
+                            <div class="book-price">
+                                <span class="current-price">${{product.price}}</span>
+                                {% comment %} <span class="original-price">$29.99</span> {% endcomment %}
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <button class="cta-button ">Explore More</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get the latest book recommendations, author interviews, and exclusive offers delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    {% include "base/footer.html" %}
+{% endblock content %}

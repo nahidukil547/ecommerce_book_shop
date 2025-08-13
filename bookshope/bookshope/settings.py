@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'bookshopeapp.context_processors.menu_items',
                 'frontend.context_processors.get_cart_item',
+                # 'frontend.context_processors.get_absolute_url',
             ],
         },
     },

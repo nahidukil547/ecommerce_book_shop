@@ -10,6 +10,11 @@ from django.http import JsonResponse
 from django.db import transaction
 from decimal import Decimal
 from .views_payment import create_payment_request
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from bookshopeapp.views import  paginate_data
+
+from django.http import JsonResponse
+from django.db.models import Q
 # Create your views here.
 
 def home (request):
@@ -28,6 +33,107 @@ def home (request):
         'best_selling': best_selling
     }
     return render(request, 'frontend/home.html', context)
+
+
+def author_list(request):
+    author_list= Author.objects.filter(is_active=True).order_by('-id')
+    paginator = Paginator(author_list, 1)
+    page_number = request.GET.get('page', 1)
+    author_list, paginator_list, last_page_number = paginate_data(request, page_number, author_list, 12)
+    main_category = ProductMainCategory.objects.filter(is_active = True)[:10]
+    sub_category = ProductSubCategory.objects.filter(is_active = True)
+    
+    context = {
+        'paginator_list': paginator_list,
+        'last_page_number': last_page_number,
+        'author_list': author_list,
+         'main_category': main_category,
+        'sub_categories': sub_category,
+        }
+
+    return render (request, 'frontend/author/author_list.html', context)
+
+
+def products_list(request):
+
+    products = Product.objects.filter(is_active=True).order_by('-id')
+    page_number = request.GET.get('page', 1)
+    products, paginator_list, last_page_number = paginate_data(request, page_number, products, 12)
+    main_category = ProductMainCategory.objects.filter(is_active = True)[:10]
+    sub_category = ProductSubCategory.objects.filter(is_active = True)
+    
+    context = {
+        'paginator_list': paginator_list,
+        'last_page_number': last_page_number,
+        'products': products,
+         'main_category': main_category,
+        'sub_categories': sub_category,
+    }
+    return render(request, "frontend/product/product_list.html", context)
+
+
+
+def category_list(request):
+
+    products = Product.objects.filter(is_active=True).order_by('-id')
+    page_number = request.GET.get('page', 1)
+    products, paginator_list, last_page_number = paginate_data(request, page_number, products, 12)
+    main_category = ProductMainCategory.objects.filter(is_active = True)
+    sub_category = ProductSubCategory.objects.filter(is_active = True)
+    
+    context = {
+        'paginator_list': paginator_list,
+        'last_page_number': last_page_number,
+        'products': products,
+        'main_category': main_category,
+        'sub_categories': sub_category,
+    }
+    return render(request, "frontend/category/category_list.html", context)
+
+
+
+def category_products(request, slug):
+    subcategory= get_object_or_404(ProductSubCategory, sub_cat_slug=slug)
+    products = Product.objects.filter(sub_category=subcategory).order_by('-id')
+    page_number = request.GET.get('page', 1)
+    products, paginator_list, last_page_number = paginate_data(request, page_number, products, 12)
+    main_category = ProductMainCategory.objects.filter(is_active = True)[:10]
+    sub_category = ProductSubCategory.objects.filter(is_active = True)
+    
+    context = {
+        'paginator_list': paginator_list,
+        'last_page_number': last_page_number,
+        'products': products,
+        'main_category': main_category,
+        'sub_categories': sub_category,
+    }
+    return render(request, "frontend/category/category_products.html", context)
+
+
+
+def products_search(request):
+    query = request.GET.get('q', '')
+    results = []
+
+    if query:
+        books = Product.objects.filter(
+            Q(product_name__icontains=query) |
+            Q(author__author_name__icontains=query) |
+            Q(main_category__main_cat_name__icontains=query) |
+            Q(sub_category__sub_cat_name__icontains=query) |
+            Q(description__icontains=query)
+        ).distinct()[:10]
+
+        for book in books:
+            results.append({
+                'title': book.product_name,
+                'author': book.author.author_name if book.author else 'unknown',
+                'url': f"/product=details/{book.product_slug}/" 
+            })
+        
+    return JsonResponse({'results': results})
+
+
 
 def login(request):
     if request.method == 'POST':
@@ -48,6 +154,9 @@ def login(request):
             next_url = "home"
         return redirect(next_url)
     return render(request, 'frontend/login_register.html')
+
+
+
 
 @login_required
 def logout(request):

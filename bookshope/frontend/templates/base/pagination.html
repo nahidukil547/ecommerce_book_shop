@@ -1,0 +1,38 @@
+
+<nav class="custom-pagination">
+  <ul class="pagination-wrapper">
+    {% if page_obj.has_previous %}
+      <li><a href="?page={{ page_obj.previous_page_number }}" class="pagination-button">‹ Prev</a></li>
+    {% else %}
+      <li><span class="pagination-button disabled">‹ Prev</span></li>
+    {% endif %}
+
+    {% if 1 not in paginator_list %}
+      <li><a href="?page=1" class="pagination-button">1</a></li>
+      {% if 2 not in paginator_list %}
+        <li><span class="pagination-button dots">…</span></li>
+      {% endif %}
+    {% endif %}
+
+    {% for page_num in paginator_list %}
+      {% if page_num == page_obj.number %}
+        <li><span class="pagination-button active">{{ page_num }}</span></li>
+      {% else %}
+        <li><a href="?page={{ page_num }}" class="pagination-button">{{ page_num }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if last_page_number not in paginator_list %}
+      {% if last_page_number|add:"-1" not in paginator_list %}
+        <li><span class="pagination-button dots">…</span></li>
+      {% endif %}
+      <li><a href="?page={{ last_page_number }}" class="pagination-button">{{ last_page_number }}</a></li>
+    {% endif %}
+
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}" class="pagination-button">Next ›</a></li>
+    {% else %}
+      <li><span class="pagination-button disabled">Next ›</span></li>
+    {% endif %}
+  </ul>
+</nav>

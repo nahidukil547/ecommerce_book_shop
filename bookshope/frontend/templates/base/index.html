@@ -8,6 +8,8 @@
     <link rel="stylesheet" href=" {% static "/frontend/css/styles.css" %} ">
     <link rel="stylesheet" href=" {% static "/frontend/css/product.css" %} ">
     <link rel="stylesheet" href=" {% static "/frontend/css/cart_details.css" %} ">
+    
+    {% block linkcss %}{% endblock linkcss %}
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -27,7 +29,7 @@
                 
                 <!-- Category Dropdown -->
                 <div class="category-dropdown">
-                    <a href="#" class="nav-link dropdown-trigger">
+                    <a href="{% url "category_list" %}" class="nav-link dropdown-trigger">
                         Categories <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="mega-menu">
@@ -39,13 +41,13 @@
                                         <ul>
                                             {% for sub_cat in main_cat.sub_categories.all %}
                                                 {% if sub_cat.is_active %}
-                                                    <li><a href=" ">{{ sub_cat.sub_cat_name|truncatechars:10  }}</a></li>
+                                                    <li><a href="{% url "category_products" slug=sub_cat.sub_cat_slug %}  ">{{ sub_cat.sub_cat_name|truncatechars:10  }}</a></li>
                                                 {% endif %}
                                             {% endfor %}
                                         </ul>
                                     </div>
                                 {% endfor %}
-                                <a href="">Explore More --></a>
+                                <a href="{% url "category_list" %}">Explore More --></a>
                             </div>
                         </div>
 
@@ -75,10 +77,21 @@
             
             <!-- Header Actions -->
             <div class="nav-actions">
-                <div class="search-container">
-                    <input type="text" placeholder="Search books..." class="search-input">
+                {% comment %} <div class="search-container">
+                    <form action="">
+                        <input type="text" placeholder="Search books..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </form>
+                </div> {% endcomment %}
+
+                <div class="search-wrapper search-container" style="position: relative;">
+                    <input type="text" id="searchInput" placeholder="Search books..." autocomplete="off" class="search-input search-bar">
                     <i class="fas fa-search search-icon"></i>
+                    <div id="searchDropdown" class="search-dropdown" style="display: none;"></div>
                 </div>
+
+
+
                   <div class="cart-container">
                     <a href="{% url "cart_details" %}">
 

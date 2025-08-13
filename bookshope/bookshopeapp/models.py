@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 import unicodedata
-
+from django.urls import reverse
 # Create your models here.
 class MenuList(models.Model):
     module_name = models.CharField(max_length=100, db_index=True)
@@ -171,6 +171,10 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=False, blank=True, null=True)
     is_active = models.BooleanField(default=True)
+
+
+
+
 
     class Meta:
         db_table = 'products'

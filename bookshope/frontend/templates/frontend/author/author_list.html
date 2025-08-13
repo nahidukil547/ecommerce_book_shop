@@ -1,0 +1,36 @@
+{% extends "base/index.html" %}
+{% load static %}
+{% comment %} {% block linkcss %}<link rel="stylesheet" href=" {% static "/css/ecommerce.css" %} ">{% endblock linkcss %} {% endcomment %}
+{% block title %}List Of Author {% endblock title %}
+
+{% block content %}
+
+    <section class="authors-section">
+            <div class="container">
+                <h2 class="section-title">Featured Authors</h2>
+                <div class="authors-grid">
+
+                    {% for author in author_list %}
+                    <a href="">
+                        <div class="author-card">
+                            <div class="author-image">
+                                <img src="{{author.author_image.url}}" alt="Author">
+                            </div>
+                            <h3>{{author.author_name| truncatechars:15}}</h3>
+                            <p>{{author.description|truncatechars:15 }}</p>
+                            <div class="author-stats">
+                                <span>{{author.product_count}} Books</span>
+                                <span>★ 4.8</span>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                    
+                </div>
+             {% include "base/pagination.html" with page_obj=author_list paginator_list=paginator_list last_page_number=last_page_number %}
+
+            </div>
+        </section>
+
+{% endblock content %}
+

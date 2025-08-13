@@ -8,7 +8,7 @@ urlpatterns = [
     path('product-main-category-list/', views.product_main_category_list_view, name='product_main_category_list'),
     path('product-sub-category-list/', views.product_sub_category_list_view, name='product_sub_category_list'),
     path('author-list/', views.author_list, name='author_list'),
-    path('product-list/', views.product_list, name='product_list'),
+    path('product-list/', views.product_list, name='dashboard_product_list'),
 
 
     path('add-product-main-category/', views.add_product_main_category, name='add_product_main_category'),

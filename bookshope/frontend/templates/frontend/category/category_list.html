@@ -1,0 +1,37 @@
+{% extends "base/index.html" %}
+{% load static %}
+{% comment %} {% block linkcss %}<link rel="stylesheet" href=" {% static "/css/ecommerce.css" %} ">{% endblock linkcss %} {% endcomment %}
+{% block title %}List Of Author {% endblock title %}
+
+{% block content %}
+
+<section class="bestsellers-section">
+        <div class="container">
+            <h2 class="section-title">Features Of Books </h2>
+            <div class="books-carousel">
+                <div class="category-grid">
+                    {% for main_cat in main_category %}
+                        <div class="category-column">
+                            <h4>{{ main_cat.main_cat_name|truncatechars:8 }}</h4>
+                            <ul>
+                                {% for sub_cat in main_cat.sub_categories.all %}
+                                    {% if sub_cat.is_active %}
+                                        <li><a href="{% url "category_products" slug=sub_cat.sub_cat_slug %} ">{{ sub_cat.sub_cat_name|truncatewords:4  }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+
+            {% include "base/pagination.html" with page_obj=products paginator_list=paginator_list last_page_number=last_page_number %}
+
+        </div>
+    </section>
+              
+
+
+{% endblock content %}
+

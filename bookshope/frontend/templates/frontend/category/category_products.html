@@ -1,0 +1,50 @@
+{% extends "base/index.html" %}
+{% load static %}
+{% comment %} {% block linkcss %}<link rel="stylesheet" href=" {% static "/css/ecommerce.css" %} ">{% endblock linkcss %} {% endcomment %}
+{% block title %}List Of Author {% endblock title %}
+
+{% block content %}
+
+    <section class="bestsellers-section">
+        <div class="container">
+            <h2 class="section-title">Features Of Books </h2>
+            <div class="books-carousel">
+                {% for product in products %}
+                <a href="">
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="{{product.product_image.url}}" alt="{{product.product_name}}">
+                            <div class="book-overlay">
+                                <button class="quick-view">Quick View</button>
+                                {% comment %} <button class="add-to-cart">Add to Cart</button> {% endcomment %}
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.author.author_name}}</p>
+                            <div class="book-rating">
+                                {% comment %} <span class="stars">★★★★★</span> {% endcomment %}
+                                <span class="rating-count">Total Views : {{product.total_views}}</span>
+                            </div>
+                            <div class="book-price">
+                                <span class="current-price">${{product.price}}</span>
+                                {% comment %} <span class="original-price">$29.99</span> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+                
+            </div>
+
+
+
+        {% include "base/pagination.html" with page_obj=products paginator_list=paginator_list last_page_number=last_page_number %}
+
+        </div>
+    </section>
+              
+
+
+{% endblock content %}
+

@@ -9,8 +9,8 @@ from django.utils.timezone import now
 from django.contrib.auth import login, logout, authenticate
 # Create your views here.
 
-def paginate_data(request, page_num, data_list):
-    items_per_page, max_pages = 10, 10
+def paginate_data(request, page_num, data_list, item_number=10):
+    items_per_page, max_pages = item_number, 10
     paginator = Paginator(data_list, items_per_page)
     last_page_number = paginator.num_pages
 
@@ -374,8 +374,8 @@ def add_new_product(request):
         product_name = request.POST.get('product_name')
         price = request.POST.get('price')
         stock = request.POST.get('stock')
-        discount_price = request.POST.get('discount_price')
-        discount_percentage = request.POST.get('discount_percentage')
+        discount_price = request.POST.get('discount_price') or 0
+        discount_percentage = request.POST.get('discount_percentage') or 0
         description = request.POST.get('description')
         main_category_id = request.POST.get('main_category')
         sub_category_id = request.POST.get('sub_category')
@@ -419,7 +419,7 @@ def add_new_product(request):
         product.save()
         
         messages.success(request, 'Product added successfully.')
-        return redirect('product_list')
+        return redirect('dashboard_product_list')
 
     main_categories= ProductMainCategory.objects.filter(is_active=True)
     sub_categories = ProductSubCategory.objects.filter(is_active=True)
@@ -458,7 +458,7 @@ def product_edit(request, id):
         product.save()
         
         messages.success(request, 'Product updated successfully.')
-        return redirect('product_list')
+        return redirect('dashboard_product_list')
     main_categories = ProductMainCategory.objects.filter(is_active=True)
     sub_categories = ProductSubCategory.objects.filter(is_active=True)
     authors = Author.objects.filter(is_active=True)
@@ -494,5 +494,5 @@ def delete_product(request, id):
     product.save()
 
     messages.success(request, 'Product deleted successfully.')
-    return redirect('product_list')
+    return redirect('dashboard_product_list')
 

@@ -46,7 +46,7 @@
                     </div>
                 </a>
                 {% endfor %}
-                <button class="cta-button ">Explore More</button>
+                <a href="{% url "author_list" %}"><button class="cta-button ">Explore More</button></a>
             </div>
         </div>
     </section>
@@ -81,7 +81,7 @@
                     </div>
                 </a>
                 {% endfor %}
-                <button class="cta-button ">Explore More</button>
+                <a href="{% url "products_list" %}"><button class="cta-button ">Explore More</button></a>
             </div>
         </div>
     </section>
@@ -114,7 +114,7 @@
                         </div>
                     </a>
                 {% endfor %}
-                <button class="cta-button ">Explore More</button>
+                <a href="{% url "products_list" %}"><button class="cta-button ">Explore More</button></a>
             </div>
         </div>
     </section>

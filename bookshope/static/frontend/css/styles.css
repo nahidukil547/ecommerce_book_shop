@@ -38,6 +38,10 @@
   --shadow-light: 0 4px 20px rgba(125, 96, 38, 0.383);
   --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.337);
 }
+ol, ul {
+	list-style: none;
+}
+
 
 
 body {
@@ -52,7 +56,7 @@ html {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 a {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 0.9rem;
   transition: var(--transition);
@@ -110,6 +114,63 @@ a {
 .message-info {
   background-color: var(--secondary-color);
   color: var(--text-secondary);
+}
+
+/* pagenation */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination-wrapper {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  background: var(--background-dark);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-dark);
+}
+
+.pagination-button {
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  background: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: inset 0 0 0 1px #2a2a2a;
+}
+
+.pagination-button:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-light);
+}
+
+.pagination-button.active {
+  background: var(--gradient-gold);
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: default;
+  box-shadow: var(--shadow-light);
+}
+
+.pagination-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination-button.dots {
+  background: transparent;
+  box-shadow: none;
+  cursor: default;
+  color: var(--text-muted);
 }
 
 /* Animation */
@@ -307,6 +368,41 @@ a {
   cursor: pointer;
 }
 
+.search-bar {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid (--accent-color);
+  border-radius: 5px;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--background-dark);
+  width: 100%;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 0 0 5px 5px;
+}
+
+.search-item {
+  padding: 10px;
+  border-bottom: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.search-item:hover {
+  background-color: var(--background-dark);
+}
+
+
+
+
+
 .cart-container {
   position: relative;
   cursor: pointer;
@@ -470,9 +566,9 @@ a {
   animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-.cta-button {
+.cta-button{
   background: var(--gradient-gold);
-  color: var(--primary-color);
+  color: var(--text-primary);
   border: none;
   padding: 15px 30px;
   border-radius: 50px;

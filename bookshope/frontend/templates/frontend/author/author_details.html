@@ -15,7 +15,7 @@
         <div class="product-container">
             <!-- Image Gallery -->
             <div class="image-gallery">
-                <img src="{{product.product_image.url}}" alt="Premium Wireless Headphones" class="main-image" id="mainImage">
+                <img src="{{author.author_image.url}}" alt="Premium Wireless Headphones" class="main-image" id="mainImage">
                 {% comment %} <div class="thumbnail-container">
                     <img src="https://picsum.photos/seed/picsum/200/300" alt="Headphones view 1" class="thumbnail active" data-src="https://picsum.photos/seed/picsum/200/300">
                     <img src="https://picsum.photos/seed/picsum/200/300" alt="Headphones view 2" class="thumbnail" data-src="https://picsum.photos/seed/picsum/200/300">
@@ -25,88 +25,56 @@
             </div>
 
             <!-- Product Info -->
-            <form action="" method="post">
-                {% csrf_token %}
                 <div class="product-info">
-                    {% comment %} <span class="product-badge">Best Seller</span> {% endcomment %}
-                    <h1 class="product-title">{{product.product_name}}</h1>
+                    
+                    <h1 class="product-title">{{author.author_name}}</h1>
                     <div class="product-rating">
                         
-                        <span class="rating-text"> By <a href="{% url "author_details" author_slug=product.author.author_slug %}">
-                             {{product.author.author_name}}
-                        </a> reviews</span>
+                        <span class="rating-text"> By {{author.description}} reviews</span>
                     </div>
                     <div class="product-rating">
                         
-                        <span class="rating-text"> • {{product.total_views}} reviews</span>
+                        <span class="rating-text"> • Date Of Birth: {{author.dob}}</span>
                     </div>
 
-                    <div class="price-container">
-                        <span class="current-price" id="currentPrice"></span>
-                        <span class="original-price" id="originalPrice" data-price="{{product.price}}">{{product.price}}</span>
-                        <span class="discount" id="discountPercent" data-discount="{{product.discount_percentage}}">{{product.discount_percentage}}% OFF</span>
-                    </div>
-
-                    <p class="product-description">
-                        {{product.description}}
-                    </p>
-
-                    <div class="options-container">
-                        <div class="option-group">
-                            <label class="option-label">Stock</label>
-                            <div class="option-buttons">
-                                <span class="option-label discount stock" id='stock' data-option="storage" data-value="premium">{{product.stock}}</span>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="add-cart-box">
-                            <div class="product-qty-box quantity-container">
-                                <label class="option-label">Quantity</label>
-                                <div class="quantity-selector">
-                                    <button type="button" id="decrement" class="decrement quantity-btn"><span> - </span></button>
-                                    <input type="number" id="cart_qty" 
-                                    name="quantity"
-                                    class="cart_qty cart_qty__{{ product.id }} quantity-input" 
-                                    min="1" max="50" data-product-id="{{ product.id }}" 
-                                    value="{{ product.product_cart.quantity|default:'1' }}">
-
-                                    <button type="button" id="increment" class="increment quantity-btn"><span> + </span></button>
-                                </div>
-                            </div>
-                            <div class="product-addtocart-box action-buttons">
-                                <button type="submit" id="add_to_cart" class="add_to_cart btn btn-primary" data-product-id="{{ product.id }}">Add to Cart</button>    
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </form>
         </div>
 
-        <!-- Features Grid -->
-        {% comment %} <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-shipping-fast feature-icon"></i>
-                <h3 class="feature-title">Free Shipping</h3>
-                <p class="feature-description">Free shipping on orders over $100</p>
+        <section class="bestsellers-section">
+        <div class="container">
+            <h2 class="section-title">Features Of Books </h2>
+            <div class="books-carousel">
+                {% for product in products %}
+                <a href="{% url "product_details" product.product_slug %}">
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="{{product.product_image.url}}" alt="{{product.product_name}}">
+                            <div class="book-overlay">
+                                <button class="quick-view">Quick View</button>
+                                {% comment %} <button class="add-to-cart">Add to Cart</button> {% endcomment %}
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.author.author_name}}</p>
+                            <div class="book-rating">
+                                {% comment %} <span class="stars">★★★★★</span> {% endcomment %}
+                                <span class="rating-count">Total Views : {{product.total_views}}</span>
+                            </div>
+                            <div class="book-price">
+                                <span class="current-price">${{product.price}}</span>
+                                {% comment %} <span class="original-price">$29.99</span> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
             </div>
-            <div class="feature-card">
-                <i class="fas fa-undo feature-icon"></i>
-                <h3 class="feature-title">30-Day Returns</h3>
-                <p class="feature-description">Easy returns within 30 days</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-shield-alt feature-icon"></i>
-                <h3 class="feature-title">2-Year Warranty</h3>
-                <p class="feature-description">Comprehensive warranty coverage</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-headset feature-icon"></i>
-                <h3 class="feature-title">24/7 Support</h3>
-                <p class="feature-description">Round-the-clock customer support</p>
-            </div>
-        </div> {% endcomment %}
+        </div>
+    </section>
+
 
         <!-- Reviews Section -->
         {% comment %} <div class="reviews-section">
@@ -168,8 +136,8 @@
                 <p>Best headphones I've ever owned! The wireless connection is stable, sound is crisp, and they're incredibly 
                    comfortable. Worth every penny.</p>
             </div>
-        </div> {% endcomment %}
-    </div>
+        </div> 
+    </div> {% endcomment %}
 
     <!-- Zoom Overlay -->
     {% comment %} <div class="zoom-overlay" id="zoomOverlay">

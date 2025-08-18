@@ -122,10 +122,8 @@ class Author(models.Model):
     author_image = models.ImageField(upload_to='ecommerce/author_image/', blank=True, null=True)
     dob = models.DateField(null=True, blank=True)
     description = models.TextField(blank=True, null=True)
-
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='authors_created_by')
     updated_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='authors_updated_by', blank=True, null=True)
-    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=False, blank=True, null=True)
     is_active = models.BooleanField(default=True)

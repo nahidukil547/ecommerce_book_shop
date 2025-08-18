@@ -10,7 +10,7 @@
             <h2 class="section-title">Features Of Books </h2>
             <div class="books-carousel">
                 {% for product in products %}
-                <a href="">
+                <a href="{% url "product_details" product.product_slug %}">
                     <div class="book-card">
                         <div class="book-image">
                             <img src="{{product.product_image.url}}" alt="{{product.product_name}}">

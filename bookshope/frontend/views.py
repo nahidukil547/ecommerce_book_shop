@@ -23,7 +23,6 @@ def home (request):
     best_selling = Product.objects.filter(is_featured=True, is_active=True).order_by('id')[:5]
     main_category = ProductMainCategory.objects.filter(is_active = True)[:10]
     sub_category = ProductSubCategory.objects.filter(is_active = True)
-    
 
     context = {
         'authors': authors,
@@ -53,9 +52,19 @@ def author_list(request):
 
     return render (request, 'frontend/author/author_list.html', context)
 
+def author_details(request,author_slug):
+    author= get_object_or_404(Author, author_slug=author_slug)
+    
+    products = Product.objects.filter(author=author) 
+    
+    context={
+        "author":author,
+        "products":products
+    }
+    return render(request,'frontend/author/author_details.html',context)
+
 
 def products_list(request):
-
     products = Product.objects.filter(is_active=True).order_by('-id')
     page_number = request.GET.get('page', 1)
     products, paginator_list, last_page_number = paginate_data(request, page_number, products, 12)
@@ -71,10 +80,7 @@ def products_list(request):
     }
     return render(request, "frontend/product/product_list.html", context)
 
-
-
 def category_list(request):
-
     products = Product.objects.filter(is_active=True).order_by('-id')
     page_number = request.GET.get('page', 1)
     products, paginator_list, last_page_number = paginate_data(request, page_number, products, 12)
@@ -158,7 +164,7 @@ def login(request):
 
 
 
-@login_required
+@login_required(login_url='/login/')
 def logout(request):
     auth_logout(request)
     return redirect('home')
@@ -180,15 +186,12 @@ def register(request):
         Customer.objects.create(user=user, name=username, phone=phone, date_of_birth=dob, address=address)
 
         messages.success(request, "Logged in successfully!")
-
         next_url = request.GET.get('next')
         if next_url:
             next_url = next_url.strip()
         else:
-            next_url = "home"
-        
+            next_url = "login"
         return redirect(next_url)
-
     return render(request, 'frontend/login_register.html')
 
 def cart_amount_summary(request):
@@ -277,7 +280,7 @@ def add_or_update_cart(request):
     return JsonResponse({'status': 'error', 'message': 'Invalid request', 'is_authenticated': is_authenticated,}, status=400)
 
 
-@login_required
+@login_required(login_url='/login/')
 def cart_details(request): 
     try:
         customer = Customer.objects.get(user=request.user)
@@ -381,7 +384,7 @@ def cart_details(request):
                 # return redirect('home')
 
 
-@login_required
+@login_required(login_url='/login/')
 def checkout(request):
     amount_summary = cart_amount_summary(request)
     grand_total = amount_summary.get('grand_total', 0)
@@ -453,13 +456,8 @@ def checkout(request):
             order_obj.tax_amount = tax_amount
             order_obj.due_amount = grand_total
             order_obj.grand_total = grand_total
-
             order_obj.save()
-
-
-
             messages.success(request, "Order placed successfully.")
-            
             response_data, response_status = create_payment_request(request, order_obj.id)
             print(response_data)
             print(response_status)

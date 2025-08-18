@@ -62,7 +62,7 @@
                                     </span>
                                 </td>
                                 <td class="text-left">
-                                    <a class="text-underline" href="">{{ data.product_name }}</a>
+                                    <a class="text-underline" href="{% url "product_detail" product_slug=data.product_slug %}">{{ data.product_name }}</a>
                                 </td>
                                 
                                 <td class="text-left">{{ data.author.author_name }}</td>

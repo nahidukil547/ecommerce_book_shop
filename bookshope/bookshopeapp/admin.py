@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ( ProductMainCategory,ProductSubCategory, UserPermission, Product )
+from .models import ( ProductMainCategory,ProductSubCategory, UserPermission, Product,Author )
 from frontend.models import Customer
 
 # Register your models here.
@@ -51,7 +51,10 @@ class UserPermissionAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
+
     list_display         = ('product_name', 'main_category', 'sub_category','price','stock', 'created_by', 'updated_by', 'is_active')
     list_filter          = ('is_active','main_category', 'sub_category')
     search_fields        = ('product_name', 'main_category__main_cat_name', 'sub_category__sub_cat_name', 'product_slug')
     ordering             = ('product_name',) 
+
+admin.site.register(Author)

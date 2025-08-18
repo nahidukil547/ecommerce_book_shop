@@ -60,7 +60,7 @@
                         {{ user.customer.name }} <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="user-menu">
-                        <a href="">Profile</a>
+                        <a href="/backend/dashboard/">Profile</a>
                         <form method="POST" action="{% url 'logout' %}">
                             {% csrf_token %}
                             <button type="submit" class="logout-btn">Logout</button>

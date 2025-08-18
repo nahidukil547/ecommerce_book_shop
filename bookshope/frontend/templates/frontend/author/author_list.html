@@ -11,7 +11,7 @@
                 <div class="authors-grid">
 
                     {% for author in author_list %}
-                    <a href="">
+                    <a href="{% url "author_details" author_slug=author.author_slug %}">
                         <div class="author-card">
                             <div class="author-image">
                                 <img src="{{author.author_image.url}}" alt="Author">

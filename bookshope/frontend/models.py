@@ -133,3 +133,12 @@ class OrderPayment(models.Model):
 
     class Meta:
         db_table = 'order_payments'
+
+class Review(models.Model):
+    review= models.TextField(null=True,blank=True)
+    product=models.ForeignKey(Product, related_name='product_review',on_delete=models.CASCADE)
+    user = models.ForeignKey(Customer,related_name='customer_review',on_delete=models.CASCADE)
+    is_active=models.BooleanField(default=True)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='review_created_by')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from bookshopeapp.models import Author,Product ,ProductMainCategory ,ProductSubCategory 
-from .models import Customer, OrderCart, OrderDetail, Order
+from .models import Customer, OrderCart, OrderDetail, Order,Review
 from django.db.models import Count
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -218,9 +218,10 @@ def product_details(request,product_slug):
     product= get_object_or_404(Product, product_slug=product_slug)
     main_category = ProductMainCategory.objects.filter(is_active = True)[:10]
     sub_category = ProductSubCategory.objects.filter(is_active = True)
-
+    product_review = Review.objects.filter(product=product).order_by("-created_at")
     context={
         'product':product,
+        'reviews':product_review,
         'main_category': main_category,
         'sub_categories': sub_category,
     }
@@ -415,7 +416,6 @@ def checkout(request):
                 billing_address=billing_address,
             )
 
-            
             order_amount, shipping_charge, discount, coupon_discount, vat_amount, tax_amount = 0, 0, Decimal('0.0'), 0, 0, 0
 
             for cart_item in cart_items:
@@ -424,7 +424,6 @@ def checkout(request):
                 unit_price = product.price
                 discount_percent = product.discount_percentage or 0
                 
-            
                 discounted_price = unit_price * (Decimal('1.0') - discount_percent / Decimal('100'))
                 total_price = discounted_price * quantity
                 item_discount_amount = (unit_price * quantity) - total_price
@@ -478,3 +477,20 @@ def checkout(request):
             return redirect('home')
 
 
+def user_review(request,product_slug):
+    product= get_object_or_404(Product, product_slug=product_slug)
+    if request.method=='POST':
+        review= request.POST.get('review')
+
+        if review:
+            customer = Customer.objects.get(user=request.user)
+            Review.objects.create(
+                review=review,
+                product=product,
+                user=customer,
+                created_by=request.user 
+            )
+            messages.success(request, "Give review successfully!")
+            return redirect("product_details", product_slug=product.product_slug)
+    return redirect("product_details", product_slug=product.product_slug)
+        

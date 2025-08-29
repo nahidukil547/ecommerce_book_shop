@@ -13,6 +13,8 @@ urlpatterns = [
 
     path('products/', views.products_list, name='products_list'),
     path('product=details/<slug:product_slug>/', views.product_details, name='product_details'),
+    
+    path("review/<slug:product_slug>/", views.user_review, name="user_review"),
 
 
     path('categories/', views.category_list, name='category_list'),
@@ -30,5 +32,6 @@ urlpatterns = [
     path('payment/cancel/<str:str_data>/', views_payment.payment_cancel, name='payment_cancel'),
     path('payment/fail/<str:str_data>/', views_payment.payment_failed, name='payment_failed'),
     path('payment/check/<str:str_data>/', views_payment.payment_check, name="payment_check"),
+
 ]
 

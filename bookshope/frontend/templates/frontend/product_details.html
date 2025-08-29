@@ -84,92 +84,104 @@
             </form>
         </div>
 
-        <!-- Features Grid -->
-        {% comment %} <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-shipping-fast feature-icon"></i>
-                <h3 class="feature-title">Free Shipping</h3>
-                <p class="feature-description">Free shipping on orders over $100</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-undo feature-icon"></i>
-                <h3 class="feature-title">30-Day Returns</h3>
-                <p class="feature-description">Easy returns within 30 days</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-shield-alt feature-icon"></i>
-                <h3 class="feature-title">2-Year Warranty</h3>
-                <p class="feature-description">Comprehensive warranty coverage</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-headset feature-icon"></i>
-                <h3 class="feature-title">24/7 Support</h3>
-                <p class="feature-description">Round-the-clock customer support</p>
-            </div>
-        </div> {% endcomment %}
-
         <!-- Reviews Section -->
-        {% comment %} <div class="reviews-section">
-            <h2 class="section-title">Customer Reviews</h2>
-            
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="reviewer-avatar">JD</div>
-                    <div class="reviewer-info">
-                        <h4>John Doe</h4>
-                        <div class="stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                        </div>
-                        <span class="review-date">2 days ago</span>
-                    </div>
-                </div>
-                <p>Absolutely amazing headphones! The sound quality is incredible and the noise cancellation works perfectly. 
-                   Battery life is exactly as advertised. Highly recommended!</p>
-            </div>
+         <!-- Review Form -->
+        {% comment %} {% if user.is_authenticated %}
+            <div class="review-form" style="margin-top:20px;">
+                <h3>Write a Review</h3>
+                <form method="post">
+                    {% csrf_token %}
 
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="reviewer-avatar">SM</div>
-                    <div class="reviewer-info">
-                        <h4>Sarah Miller</h4>
-                        <div class="stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="far fa-star star"></i>
-                        </div>
-                        <span class="review-date">1 week ago</span>
-                    </div>
-                </div>
-                <p>Great build quality and comfort. Perfect for long work sessions. The only minor issue is that they can get 
-                   a bit warm after extended use, but overall excellent product.</p>
-            </div>
+                    <!-- Comment -->
+                    <label for="comment">Comment:</label><br>
+                    <textarea name="comment" id="comment" rows="4" cols="50" 
+                            placeholder="Write your experience..." required></textarea>
+                    <br><br>
 
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="reviewer-avatar">MJ</div>
-                    <div class="reviewer-info">
-                        <h4>Mike Johnson</h4>
-                        <div class="stars">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                        </div>
-                        <span class="review-date">2 weeks ago</span>
-                    </div>
-                </div>
-                <p>Best headphones I've ever owned! The wireless connection is stable, sound is crisp, and they're incredibly 
-                   comfortable. Worth every penny.</p>
+                    <!-- Submit Button -->
+                    <button type="submit" 
+                            style="background:#007bff; color:white; padding:8px 15px; border:none; border-radius:5px;">
+                        Submit Review
+                    </button>
+                </form>
             </div>
-        </div> {% endcomment %}
-    </div>
+        {% else %}
+            <p><a href="{% url 'login' %}">Login</a> to write a review.</p>
+        {% endif %} {% endcomment %}
+
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <!-- Authenticated User Review Form -->
+            <div class="review-form-container" id="authenticatedReview">
+                <div class="review-form-card">
+                    <div class="review-form-header">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="header-text">
+                            <h3>Write a Review</h3>
+                            <p>Share your thoughts about this book</p>
+                        </div>
+                    </div>
+                    
+                    <form class="review-form" method="post" id="reviewForm" action="{% url 'user_review' product_slug=product.product_slug %}">
+                       {% csrf_token %}
+                        <!-- Comment Section -->
+                        <div class="form-group">
+                            <label for="comment" class="form-label">
+                                Your Review <span class="required">*</span>
+                            </label>
+                            <div class="textarea-container">
+                                <textarea 
+                                    name="review" 
+                                    id="comment" 
+                                    rows="6" 
+                                    placeholder="Share your experience with this book. What did you love about it? Would you recommend it to others?"
+                                    required
+                                    maxlength="500"
+                                ></textarea>
+                                <div class="char-count">
+                                    <span id="charCount">0</span>/500
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit" id="submitReview">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit Review
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        {% if reviews %}
+            <div class="reviews-section">
+                <h2 class="section-title">Customer Reviews</h2>
+                
+                {% for review in reviews %}
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar"> {{ review.user.name|slice:":1"|upper|default:"U" }}</div>
+                        <div class="reviewer-info">
+                            <h4>{{review.user.name|capfirst}}</h4>
+                            <p>{{review.review}}</p>
+                            <span class="review-date">{{review.created_at|date:"M d, Y" }}</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                {% endfor %}
+                
+            </div> 
+        {% endif %}
+  
 
     <!-- Zoom Overlay -->
     {% comment %} <div class="zoom-overlay" id="zoomOverlay">

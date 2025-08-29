@@ -170,10 +170,6 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now_add=False, blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
-
-
-
-
     class Meta:
         db_table = 'products'
         verbose_name_plural = 'Products'
